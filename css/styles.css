@@ -285,7 +285,8 @@ header .container {
 }
 .social-team-list {
   display: flex;
-  gap: 24px;
+  gap: 24px;}
+  
   .social-list-link-team {
       display: flex;
       align-items: center;
