@@ -526,7 +526,7 @@ header .container {
 }
 .portfolio-list-li:hover,
 .portfolio-list-li:focus {
-  /* color: var(--color-pressed-states); */
+  color: var(--color-pressed-states);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -566,8 +566,8 @@ header .container {
   letter-spacing: 0.32px;
   background-color: var(--color-primary-brand);
 }
-.portfolio-list-li:hover .overlay,
-.portfolio-list-li:focus .overlay {
+.portfolio-list-link:hover .overlay,
+.portfolio-list-link:focus .overlay {
   transform: translateY(0);
   transition: transform 300ms;
 }
