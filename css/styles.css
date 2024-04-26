@@ -286,6 +286,22 @@ header .container {
 .social-team-list {
   display: flex;
   gap: 24px;
+  .social-list-link-team {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50% 50%;
+      fill: var(--color-light);
+      background-color: var(--color-primary-brand);
+    }
+}
+.social-list-link-team:hover,
+.social-list-link-team:focus {
+  fill: var(--color-light);
+  background-color: var(--color-pressed-states);
+  transition: var(--trans);
 }
 .team-title-text {
   padding-top: 32px;
