@@ -351,8 +351,7 @@ header .container {
 }
 
 .customers-list-link {
-  /* width: calc((100% - 5 * 24px) / 6); */
-  width: 168px;
+    width: 168px;
   height: 88px;
   display: flex;
   align-items: center;
