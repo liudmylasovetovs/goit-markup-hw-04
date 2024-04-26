@@ -96,6 +96,7 @@ header .container {
   margin-left: 76px;
 }
 .nav-list-link {
+  position: relative;
   color: var(--color-dark);
   font-family: inherit;
   font-size: 16px;
@@ -116,9 +117,9 @@ header .container {
 .nav-list-link::after {
   content: '';
   display: block;
-  position: relative;
+  position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -149,6 +150,8 @@ header .container {
   transition: var(--trans);
 }
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--color-dark);
   padding: 188px 0;
   background-image: linear-gradient(
@@ -156,8 +159,8 @@ header .container {
       rgba(46, 47, 66, 0.7)
     ),
     url(../image/people-office.jpg);
-  background-position: 0px -167.766px;
-  background-size: 100% 139.922%;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .hero .container {
@@ -218,6 +221,7 @@ header .container {
   border-radius: 4px;
   width: 264px;
   height: 112px;
+  margin-bottom: 8px;
 }
 .features-list-li {
   width: calc((100% - 3 * 24px) / 4);
@@ -277,8 +281,11 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   padding-top: 8px;
+}
+.social-team-list {
+  display: flex;
+  gap: 24px;
 }
 .team-title-text {
   padding-top: 32px;
@@ -289,6 +296,7 @@ header .container {
   gap: 24px;
 }
 .team-list-li {
+  background-color: var(--color-white-background);
   width: calc((100% - 3 * 24px) / 4);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -331,6 +339,7 @@ header .container {
 }
 .section-customers {
   padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--color-white-background);
 }
 .customers-title {
@@ -347,8 +356,7 @@ header .container {
 .customers-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
-}
+ }
 
 .customers-list-link {
     width: 168px;
@@ -425,7 +433,7 @@ header .container {
 .social-list-link:hover,
 .social-list-link:focus {
   fill: var(--color-light);
-  background-color: var(--color-pressed-states);
+  background-color: var(--color-success);
   transition: var(--trans);
 }
 .social-list-li {
@@ -541,7 +549,8 @@ header .container {
   letter-spacing: 0.32px;
   background-color: var(--color-primary-brand);
 }
-.portfolio-list-li:hover .overlay {
+.portfolio-list-li:hover .overlay,
+.portfolio-list-li:focus .overlay {
   transform: translateY(0);
   transition: transform 300ms;
 }
@@ -586,4 +595,9 @@ header .container {
   background-color: var(--color-accent);
   border: 1px solid rgba(0, 0, 0, 0.10);
     }
-
+.modal-button:hover,
+.modal-button:focus {
+  fill: var(--color-white-background);
+  background-color: var(--color-pressed-states);
+  transition: var(--trans)
+}
